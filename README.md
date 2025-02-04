@@ -1,30 +1,14 @@
 
-# openEBL Design Submissions
-
-- The Silicon Electronic Photonics Integrated Circuits (SiEPIC) fabrication program, <a href="https://siepic.ca/fabrication/">SiEPICfab</a>, presents the open electron beam lithography (EBL) fabrication process, where former and current students of <a href="https://siepic.ca/education/">SiEPIC</a> workshops and courses can submit their design for manufacturing and testing.
-- More details about <a href="https://siepic.ca/openEBL/">openEBL</a>.
-- **Submission deadline: February 15, 2025.**
-- The previous submission was in [October 2024](https://github.com/SiEPIC/openEBL-2024-10). You can look at previous designs for inspiration.
+# Shuksan laser integration Design Submissions
 
 # Fabrication process: Passive Silicon
 ## Technical summary:
 - SOI wafer, 220 nm silicon
-- Baseline process:
-  - Single full etch, using a negative resist (HSQ)
-  - Oxide cladding
-- Process Design Kit: [SiEPIC-EBeam-PDK](https://github.com/siepic/SiEPIC_EBeam_PDK)
-- Chip fabrication by [Applied Nanotools](https://www.appliednt.com/nanosoi-fabrication-service/)
-
-## Layer table
-| Name            | Layer/datatype | Description                                                                          |
-|-----------------|----------------|--------------------------------------------------------------------------------------|
-| Si  | 1/0 | [Fabricated] Layer to draw silicon geometries |
-| Floorplan | 99/0 | [Virtual] Marks the layout design area |
-| Text | 10/0 | [Virtual] Text labels for automated measurements |
-| DevRec | 68/0 | [Virtual] Device recognition layer for component connectivity, netlist extraction, and verification|
-| PinRec  | 1/10  | [Virtual] Port/pins recognition layer for component connectivity, netlist extraction, and verification|
-| Waveguide | 1/99 | [Virtual] Guiding shape for waveguide, used for length calculation |
-| SEM | 200/0 | [Virtual] Requests for SEM images. Rectangles in a 4:3 aspect ratio |
+- Process:
+  - Single full etch, using a positive resist
+  - Air cladding
+  - Laser integration
+- Process Design Kit: [SiEPIC-EBeam-PDK](https://github.com/SiEPIC/SiEPICfab-EBeam-ZEP-PDK)
 
 
 # Submission instructions:
@@ -32,8 +16,7 @@
 The submission involves several steps. First, you need to create your design(s) using the process design kit (PDK) for this specific fabrication run. Then you need to create a Fork of this repository, commit your design(s), ensure that it passes the checks, and create a pull request. Once your pull request is approved, your design(s) will be merged into the layout for fabrication. You should verify that your design is correctly merged. Once the designs are fabricated, they will be tested, and the measurement results will be posted in this repository.
 
 ## Design software and PDK installation instructions:
- - Design tools and process design kit (SiEPIC-EBeam-PDK, KLayout implementation)<a href="https://github.com/siepic/SiEPIC_EBeam_PDK/wiki/Installation-instructions"> installation instructions</a>.
- - Create your design using Python ([example Jupyter notebook](https://colab.research.google.com/drive/1q3PU5ESmOa171J6KOkiUUlVXPnPBuCg-?usp=sharing), [example Python file](https://github.com/SiEPIC/openEBL-2024-10/blob/main/submissions/KLayout%20Python/EBeam_LukasChrostowski_MZI.py)) or using the Graphical Interface in KLayout
+ - Design tools and process design kit installation instructinos
 
 ## Submission via GitHub
  - [Watch this video for a demonstration](https://kaltura.clemson.edu/media/t/1_iwysnxub)
